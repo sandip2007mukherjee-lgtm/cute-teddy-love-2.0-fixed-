@@ -1,8 +1,12 @@
-# Love Response — fixed version
-This version fixes the two reported issues:
-- NO remains clickable for the 6th press and then immediately shows the sad result.
-- YES immediately shows the happy result; Firestore saving happens in the background so a Firebase error cannot block the animation.
+# Cute Teddy Love – Fast GitHub Pages build
 
-Upload all files together. Keep `admin.html`, `admin.js`, and `admin.css` in the same folder. Publish `firestore.rules`, and enable Google Sign-In in Firebase Authentication.
+## Files
+- `index.html` – public love question page
+- `admin.html` – private response dashboard
+- `app.js` / `admin.js` – Firebase logic
+- `firestore.rules` – response write/read rules
 
-Admin account: sandip2007mukherjee@gmail.com
+## Admin
+Open `/admin.html` on the same GitHub Pages site and sign in with the authorized Google account configured in `admin.js`.
+
+The dashboard uses a realtime Firestore listener, so new names/responses appear automatically without repeatedly reloading the page.

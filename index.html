@@ -1,40 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For You ❤️</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#120b18"><meta name="description" content="A cute love question for someone special.">
+<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.gstatic.com">
 <link rel="stylesheet" href="style.css">
+<title>Cute Teddy Love ❤️</title>
 </head>
 <body>
+<div class="glow g1"></div><div class="glow g2"></div>
 <main class="card">
+  <div class="brand"><div class="teddy" aria-hidden="true">🧸</div><div><div class="brand-title">Cute Teddy Love</div><div class="brand-sub">♡ your feelings matter ♡</div></div></div>
   <section id="name">
-    <div class="teddy">🧸💗</div>
-    <h1>Hey cutie 💕</h1>
-    <p>First, tell me your name...</p>
-    <input id="n" maxlength="40" placeholder="Your name">
-    <button id="go">Continue 💖</button>
-    <p id="err"></p>
+    <div class="mini-heart">💌</div><h1>Hey cutie 💕</h1><p class="sub">First, tell me your name...</p>
+    <input id="n" maxlength="40" autocomplete="name" placeholder="Your name" enterkeyhint="done">
+    <button id="go" class="primary">Continue 💖</button><p id="err"></p>
   </section>
-
   <section id="q" class="hide">
-    <div id="teddy" class="teddy">🧸❤️</div>
-    <h1>Do you love me or not? 🥺❤️</h1>
-    <p id="hello"></p>
-    <div class="buttons">
-      <button id="yes">Yes 💕</button>
-      <button id="no">No 😢</button>
-    </div>
-    <p id="status"></p>
+    <div id="teddy" class="teddy pulse">🧸</div><h1>Do you love me or not? 🥺❤️</h1><p id="hello" class="sub"></p>
+    <div class="buttons"><button id="yes" class="primary">Yes 💕</button><button id="no" class="no">No 😢</button></div><p id="status"></p>
   </section>
-
-  <section id="result" class="hide">
-    <div id="rt" class="teddy">🧸❤️</div>
-    <h1 id="title"></h1>
-    <p id="msg"></p>
-    <button onclick="location.reload()">Again 💕</button>
-  </section>
+  <section id="result" class="hide"><div id="rt" class="teddy">🧸</div><h1 id="title"></h1><p id="msg"></p><button class="ghost" onclick="location.reload()">Again 💕</button></section>
 </main>
 <script type="module" src="app.js"></script>
-</body>
-</html>
+</body></html>
