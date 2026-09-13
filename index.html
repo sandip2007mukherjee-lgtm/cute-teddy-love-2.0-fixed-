@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For You ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <section id="name">
+    <div class="teddy">🧸💗</div>
+    <h1>Hey cutie 💕</h1>
+    <p>First, tell me your name...</p>
+    <input id="n" maxlength="40" placeholder="Your name">
+    <button id="go">Continue 💖</button>
+    <p id="err"></p>
+  </section>
+
+  <section id="q" class="hide">
+    <div id="teddy" class="teddy">🧸❤️</div>
+    <h1>Do you love me or not? 🥺❤️</h1>
+    <p id="hello"></p>
+    <div class="buttons">
+      <button id="yes">Yes 💕</button>
+      <button id="no">No 😢</button>
+    </div>
+    <p id="status"></p>
+  </section>
+
+  <section id="result" class="hide">
+    <div id="rt" class="teddy">🧸❤️</div>
+    <h1 id="title"></h1>
+    <p id="msg"></p>
+    <button onclick="location.reload()">Again 💕</button>
+  </section>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
