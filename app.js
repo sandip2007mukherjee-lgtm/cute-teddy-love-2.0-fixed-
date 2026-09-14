@@ -1,6 +1,6 @@
 import{initializeApp}from"https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import{getFirestore,collection,addDoc,serverTimestamp}from"https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
-const cfg={apiKey:"AIzaSyD-autiWDynxIrZKSB53FWaNGSTbxYComU",authDomain:"love-page-d3a05.firebaseapp.com",projectId:"love-page-d3a05",storageBucket:"love-page-d3a05.firebasestorage.app",messagingSenderId:"857612763723",appId:"1:857612763723:web:03cd1b0335015cd05943ce"};
+const cfg={apiKey:"AIzaSyAF3mfufOYyXktZw56kHmRrw_gdB4Q_1Eg",authDomain:"love-ecom.firebaseapp.com",projectId:"love-ecom",storageBucket:"love-ecom.firebasestorage.app",messagingSenderId:"1010601603461",appId:"1:1010601603461:web:451336359a74215c93d4ec",measurementId:"G-3E6YCK85TE"};
 const db=getFirestore(initializeApp(cfg)), $=id=>document.getElementById(id);let visitorName="",noCount=0,finished=false;
 const save=(answer)=>{const data={name:visitorName,answer,noPresses:noCount,createdAt:serverTimestamp()};try{const p=addDoc(collection(db,"responses"),data);p.catch(e=>console.error(e));}catch(e){console.error(e)}};
 $("go").onclick=()=>{const n=$("n").value.trim();if(!n){$("err").textContent="Please enter your name 💗";return}visitorName=n;$("hello").textContent=`Hey ${n} 💕`;$("name").classList.add("hide");$("q").classList.remove("hide")};$("n").onkeydown=e=>{if(e.key==="Enter")$("go").click()};

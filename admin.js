@@ -1,7 +1,7 @@
 import{initializeApp}from"https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import{getAuth,GoogleAuthProvider,signInWithPopup,onAuthStateChanged,signOut}from"https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 import{getFirestore,collection,onSnapshot,query,orderBy}from"https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
-const cfg={apiKey:"AIzaSyD-autiWDynxIrZKSB53FWaNGSTbxYComU",authDomain:"love-page-d3a05.firebaseapp.com",projectId:"love-page-d3a05",storageBucket:"love-page-d3a05.firebasestorage.app",messagingSenderId:"857612763723",appId:"1:857612763723:web:03cd1b0335015cd05943ce"},ADMIN="sandip2007mukherjee@gmail.com";
+const cfg={apiKey:"AIzaSyAF3mfufOYyXktZw56kHmRrw_gdB4Q_1Eg",authDomain:"love-ecom.firebaseapp.com",projectId:"love-ecom",storageBucket:"love-ecom.firebasestorage.app",messagingSenderId:"1010601603461",appId:"1:1010601603461:web:451336359a74215c93d4ec",measurementId:"G-3E6YCK85TE"},ADMIN="sandip2007mukherjee@gmail.com";
 const app=initializeApp(cfg),auth=getAuth(app),db=getFirestore(app),$=id=>document.getElementById(id);let unsub=null;
 $("loginBtn").onclick=async()=>{try{await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){$("err").textContent=e.message}};$("logout").onclick=()=>signOut(auth);
 onAuthStateChanged(auth,u=>{if(unsub){unsub();unsub=null}if(u?.email===ADMIN){$("login").classList.add("hide");$("dash").classList.remove("hide");listen()}else{$("dash").classList.add("hide");$("login").classList.remove("hide");if(u)$("err").textContent="This Google account is not authorized."}});
